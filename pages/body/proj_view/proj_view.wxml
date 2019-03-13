@@ -1,0 +1,13 @@
+<!--pages/body/proj_view/proj_view.wxml-->
+
+<template name="singleProj">
+  <view>
+    <button type='default'>{{name}}</button>
+  </view>
+</template>
+
+<view wx:for="{{projlist}}">
+  <template is="singleProj" data="{{...item.proj}}"/>
+</view>
+
+<div>hello</div>

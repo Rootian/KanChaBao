@@ -15,6 +15,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  Login:function(){
+    wx.navigateTo({
+      url: '../body/proj_view/proj_view',
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
