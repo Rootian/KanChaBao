@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/body/proj_view/proj_view"
+    "pages/body/proj_view/proj_view",
+    "pages/body/add_proj/add_proj",
+    "pages/body/edit_proj/edit_proj"
   ],
   "window": {
     "backgroundTextStyle": "light",

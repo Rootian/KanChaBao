@@ -1,13 +1,13 @@
 <!--pages/body/proj_view/proj_view.wxml-->
 
-<template name="singleProj">
-  <view>
-    <button type='default'>{{name}}</button>
-  </view>
-</template>
-
-<view wx:for="{{projlist}}">
-  <template is="singleProj" data="{{...item.proj}}"/>
+<view class="container">
+<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" >
+<view class="content">{{item.content}}</view>
+<view class="edit" catchtap="edit" data-index="{{index}}" hover-class="ui-edit-hover">编辑</view>
+<view class="del" catchtap="del" data-index="{{index}}" hover-class="ui-del-hover">删除</view>
+</view>
 </view>
 
-<div>hello</div>
+<view class='ui-add-icon' hover-class="ui-add-hover"> 
+     <image class='ui-add-img'  src='../../image/add_proj.png' bindtap='add_proj'></image>   
+</view>

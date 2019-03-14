@@ -1,1 +1,87 @@
 /* pages/body/proj_view/proj_view.wxss */
+
+.ui-add-icon{
+  margin-top:30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+ .ui-add-img{
+  width: 150rpx;
+  height: 150rpx;
+ }
+
+ .ui-add-hover{
+   opacity: 0.9;
+   transform: scale(0.9,0.9);
+ }
+
+page {
+background-color: white;
+}
+.container {
+min-height: 100%;
+padding: 50rpx 20rpx;
+}
+
+.touch-item {
+font-size: 14px;
+display: flex;
+justify-content: space-between;
+border-bottom:1px solid #ccc;
+width: 100%;
+overflow: hidden
+}
+
+.content {
+width: 100%;
+padding: 10px;
+line-height: 22px;
+margin-right:0;
+-webkit-transition: all 0.4s;
+transition: all 0.4s;
+-webkit-transform: translateX(90px);
+transform: translateX(90px);
+margin-left: -90px
+
+}
+
+.del {
+background-color: orangered;
+width: 90px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: #fff;
+-webkit-transform: translateX(300px);
+transform: translateX(300rpx);
+-webkit-transition: all 0.4s;
+transition: all 0.4s;
+
+}
+.edit{
+background-color: deepskyblue;
+width: 90px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: #fff;
+-webkit-transform: translateX(330px);
+transform: translateX(330rpx);
+-webkit-transition: all 0.4s;
+transition: all 0.4s;
+}
+.ui-edit-hover,
+.ui-del-hover{
+  opacity: 0.9;
+  transform: scale(0.9,0.9);
+}
+
+.touch-move-active .content,
+.touch-move-active .del ,
+.touch-move-active .edit{
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}

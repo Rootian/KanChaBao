@@ -1,4 +1,4 @@
-// pages/body/proj_view/proj_view.js
+// pages/body/add_proj/add_proj.js
 Page({
 
   /**
@@ -9,46 +9,24 @@ Page({
     startX: 0, //开始坐标
     startY: 0
   },
-  add_proj:function(){
-    wx.navigateTo({
-      url: '../add_proj/add_proj',
-    })
-  },
-  // edit_proj:function(){
-  //   wx.showActionSheet({
-  //     itemList: ["编辑","删除"],
-  //     success(res){
-  //       if (res.tapIndex == 0) //编辑
-  //       {
-  //         wx.navigateTo({
-  //           url: '../edit_proj/edit_proj',
-  //         })
-  //       }
-  //       else{
-  //         //删除
-
-  //       }
-  //     }
-  //   })
-  // },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (option) {
+   
     for (var i = 0; i < 10; i++) {
       this.data.items.push({
-        content: "A00" + i,
+        content: i + " 向左滑动删除哦,向左滑动删除哦,向左滑动删除哦,向左滑动删除哦,向左滑动删除哦",
         isTouchMove: false //默认隐藏删除
       })
     }
     this.setData({
       items: this.data.items
     });
-`   `
   },
   touchstart: function (e) {
-    //开始触摸时 重置所有操作
+    //开始触摸时 重置所有删除
     this.data.items.forEach(function (v, i) {
       if (v.isTouchMove)//只操作为true的
         v.isTouchMove = false;
@@ -99,32 +77,20 @@ Page({
   },
 
   //删除事件
+
   del: function (e) {
-    setTimeout(this.del_timeout,450,e)
-  },
-  del_timeout:function(e){
     this.data.items.splice(e.currentTarget.dataset.index, 1)
     this.setData({
       items: this.data.items
     })
   },
-  //编辑时间
-  edit:function(e){
-    setTimeout(this.edit_timeout,300,e)
-  },
-  edit_timeout:function(){
-    wx.navigateTo({
-      url: '../edit_proj/edit_proj',
-    })
-  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.setNavigationBarTitle({
-      title: '我的项目',
-    })
+
   },
 
   /**
