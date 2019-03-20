@@ -1,0 +1,43 @@
+<!--pages/body/add_geo/add_geo.wxml-->
+<view class='container'>
+  <view class='info_table'>
+    <view class='double_info_text'>
+    <view class='info_text double_input'>土层名称</view>
+    <view class='info_text double_input'>变层深度/米</view>
+    </view> 
+    <view class='loc_double'>
+    <view class='cell_input'>
+      <input placeholder='人工填土' bindblur='iname' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    <view class='cell_input'>
+      <input placeholder='50' bindblur='idepth' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    </view>
+  </view>
+  <view class='info_table'>
+    <view class='double_info_text'>
+    <view class='info_text double_input'>土层颜色</view>
+    <view class='info_text double_input'>土层气味</view>
+  </view>
+  <view class='loc_double'>
+    <view class='cell_input'>
+      <input placeholder='棕黄' bindblur='icolor' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    <view class='cell_input'>
+      <input placeholder='无味' bindblur='ismell' type='text' confirm-type='done' class='input loc'/>
+    </view>
+  </view>
+  </view>
+
+  <view class='info_text'>拍摄土层照片</view>
+  <view hover-class='addPhoto' bindtap='addPhoto'>
+    <image src='/pages/image/add_photo.png' class='button_add' />
+  </view>
+  <view wx:if='{{photo}}'class='info_text'>预览</view>
+  <image wx:if="{{photo}}" src="{{photo}}"></image>
+</view>
+
+  <view class='double_view'>
+  <button class='button_bottom quit' bindtap='quit_page' hover-class="button_hover">放弃</button>
+  <button class='button_bottom save' bindtap='save_page' hover-class="button_hover">保存</button>
+  </view>

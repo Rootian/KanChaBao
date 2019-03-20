@@ -1,15 +1,40 @@
 {
   "pages": [
+    "pages/body/proj_view/proj_view",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/body/proj_view/proj_view",
     "pages/body/add_proj/add_proj",
-    "pages/body/edit_proj/edit_proj"
+    "pages/body/edit_proj/edit_proj",
+    "pages/body/new_point/new_point",
+    "pages/body/geo/geo",
+    "pages/body/soil/soil",
+    "pages/body/groundwater/groundwater",
+    "pages/body/add_geo/add_geo",
+    "pages/body/add_soil/add_soil",
+    "pages/body/add_water/add_water"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "top",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/body/geo/geo",
+        "text": "地质"
+      },
+      {
+        "pagePath": "pages/body/soil/soil",
+        "text": "土壤"
+      },
+      {
+        "pagePath": "pages/body/groundwater/groundwater",
+        "text": "地下水"
+      }
+    ]
   }
 }

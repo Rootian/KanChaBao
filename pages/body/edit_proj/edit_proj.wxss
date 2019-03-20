@@ -1,1 +1,46 @@
 /* pages/body/edit_proj/edit_proj.wxss */
+@import "../../common/lib/bottom.wxss";
+@import "../../common/lib/title_text.wxss";
+.info{
+  display:flex;
+  padding:0rpx;
+  justify-content: space-around;
+  
+}
+.table{
+  /* border:1px solid #dadada; */
+}
+.info_text{
+  border: 1px solid #dadada;
+  margin-top:30rpx;
+}
+.radio{
+  display:flex;
+  padding-top:30rpx;
+}
+.radio-group{
+  padding-top:10rpx;
+  line-height: 100rpx;
+}
+.points_info{
+  display:flex;
+  width:100%;
+  padding:0;
+  border:1px solid #dadada;
+  background-color: white;
+}
+.r_index{
+  position:absolute;
+  left:100rpx;
+}
+.r_name{
+  position:absolute;
+  left:280rpx;
+}
+.r_status{
+  position:absolute;
+  left:600rpx;
+}
+.edit_point{
+  bottom: 112rpx;
+}

@@ -1,0 +1,59 @@
+<!--pages/body/add_soil/add_soil.wxml-->
+<view class='container'>
+  <view class='info_table'>
+    <view class='double_info_text'>
+    <view class='info_text double_input'>采样深度/米</view>
+    <view class='info_text double_input'>样品编号</view>
+  </view>
+  <view class='loc_double'>
+    <view class='cell_input'>
+      <input placeholder='30' bindblur='idepth' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    <view class='cell_input'>
+      <input placeholder='ERF3' bindblur='iid' type='text' confirm-type='done' class='input loc'/>
+    </view>
+  </view>
+  </view>
+
+  <view class='info_table'>
+    <view class='double_info_text'>
+    <view class='info_text double_input'>气味</view>
+    <view class='info_text double_input'>检测指标</view>
+  </view>
+  <view class='loc_double'>
+    <view class='cell_input'>
+      <input placeholder='无味' bindblur='ismell' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    <view class='cell_input'>
+      <input placeholder='XX' bindblur='istandard' type='text' confirm-type='done' class='input loc'/>
+    </view>
+  </view>
+  </view>
+
+  <view class='info_table'>
+    <view class='double_info_text'>
+    <view class='info_text double_input'>PID检测结果</view>
+    <view class='info_text double_input'>XRF检测结果</view>
+  </view>
+  <view class='loc_double'>
+    <view class='cell_input'>
+      <input placeholder='30' bindblur='ipid' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    <view class='cell_input'>
+      <input placeholder='ERF3' bindblur='ixrf' type='text' confirm-type='done' class='input loc'/>
+    </view>
+  </view>
+  </view>
+
+  <view class='info_text'>拍摄土壤照片</view>
+  <view hover-class='addPhoto' bindtap='addPhoto'>
+    <image src='/pages/image/add_photo.png' class='button_add' />
+  </view>
+  <view wx:if='{{photo}}'class='info_text'>预览</view>
+  <image wx:if="{{photo}}" src="{{photo}}"></image>
+</view>
+
+  <view class='double_view'>
+  <button class='button_bottom quit' bindtap='quit_page' hover-class="button_hover">放弃</button>
+  <button class='button_bottom save' bindtap='save_page' hover-class="button_hover">保存</button>
+  </view>

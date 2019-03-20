@@ -1,0 +1,26 @@
+<!--pages/body/geo/geo.wxml-->
+<view class='container'>
+  <view class='double_info_text'>
+    <view class='info_text double_input'>样品照片</view>
+    <view class='info_text double_input'>土层名称</view>
+  </view>
+  <view wx:if="{{flag}}"  bindtap='select_sample' hover-class='addLayer'>
+    <view wx:for="{{geo_items}}" wx:key="{{item.index}}">
+      <view class='layer'>
+        <image src='{{item.path}}' class='photo_pre'></image>
+        <view class='id_text'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view hover-class='addLayer' bindtap='addLayer'>
+    <image src='/pages/image/addLayer.png' class='button_add' />
+  </view>
+</view>
+
+
+<view class='double_view'>
+  <button class='button_bottom quit' bindtap='quit_page' hover-class="button_hover">放弃</button>
+  <button class='button_bottom save' bindtap='save_page' hover-class="button_hover">保存</button>
+</view>

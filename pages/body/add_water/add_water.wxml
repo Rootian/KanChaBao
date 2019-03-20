@@ -1,0 +1,37 @@
+<!--pages/body/add_water/add_water.wxml-->
+<view class='container'>
+  <view class='info_table' wx:for='{{inputs}}' wx:key='{{item.index}}'>
+    <view class='double_info_text'>
+    <view class='info_text double_input'>{{item.fst_input}}</view>
+    <view class='info_text double_input'>{{item.sec_input}}</view>
+  </view>
+  <view class='loc_double'>
+    <view class='cell_input'>
+      <input placeholder='{{item.holder1}}' bindblur='{{item.bind1}}' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    <view class='cell_input'>
+      <input placeholder='{{item.holder2}}' bindblur='{{item.bind2}}' type='text' confirm-type='done' class='input loc'/>
+    </view>
+  </view>
+  </view>
+  <view class='info_text'>性状描述</view>
+  <view class='cell_input describe'>
+    <input placeholder='XXXXXXX' bindblur='c_describe' type='text' confirm-type='done' class='describe'/>
+  </view>
+
+  <view class='info_text'>拍摄地下水照片</view>
+  <view hover-class='addPhoto' bindtap='addPhoto'>
+    <image src='/pages/image/add_photo.png' class='button_add' />
+  </view>
+  <view wx:if='{{photo}}'class='info_text'>预览</view>
+  <image wx:if="{{photo}}" src="{{photo}}" class='image_size'></image>
+</view>
+
+<view style='width:100%;height:100rpx'></view>
+
+<view class='double_view'>
+  <button class='button_bottom quit' bindtap='quit_page' hover-class="button_hover">放弃</button>
+  <button class='button_bottom save' bindtap='save_page' hover-class="button_hover">保存</button>
+</view>
+
+

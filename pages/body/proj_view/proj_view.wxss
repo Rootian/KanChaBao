@@ -1,27 +1,13 @@
 /* pages/body/proj_view/proj_view.wxss */
-
-.ui-add-icon{
-  margin-top:30rpx;
-  display: flex;
-  justify-content: center;
-}
-
- .ui-add-img{
-  width: 150rpx;
-  height: 150rpx;
- }
-
- .ui-add-hover{
-   opacity: 0.9;
-   transform: scale(0.9,0.9);
- }
-
-page {
-background-color: white;
-}
+@import "../../common/lib/page.wxss";
+@import "../../common/lib/bottom.wxss";
+@import "../../common/lib/title_text.wxss";
 .container {
 min-height: 100%;
-padding: 50rpx 20rpx;
+padding: 10rpx 20rpx;
+background-color:ghostwhite;
+/* margin-top:20rpx; */
+
 }
 
 .touch-item {
@@ -30,19 +16,23 @@ display: flex;
 justify-content: space-between;
 border-bottom:1px solid #ccc;
 width: 100%;
-overflow: hidden
+overflow: hidden;
+border:1px solid #dadada;
+margin-bottom: 30rpx;
+background-color: white;
 }
 
 .content {
 width: 100%;
-padding: 10px;
-line-height: 22px;
+padding: 15px;
+line-height: 20px;
 margin-right:0;
 -webkit-transition: all 0.4s;
 transition: all 0.4s;
 -webkit-transform: translateX(90px);
 transform: translateX(90px);
-margin-left: -90px
+margin-left: -90px;
+
 
 }
 
@@ -58,6 +48,7 @@ color: #fff;
 transform: translateX(300rpx);
 -webkit-transition: all 0.4s;
 transition: all 0.4s;
+border:1px solid #dadada;
 
 }
 .edit{
@@ -72,10 +63,11 @@ color: #fff;
 transform: translateX(330rpx);
 -webkit-transition: all 0.4s;
 transition: all 0.4s;
+border:1px solid #dadada;
 }
 .ui-edit-hover,
-.ui-del-hover{
-  opacity: 0.9;
+.ui-del-hover,{
+  opacity: 0.8;
   transform: scale(0.9,0.9);
 }
 
@@ -84,4 +76,7 @@ transition: all 0.4s;
 .touch-move-active .edit{
 -webkit-transform: translateX(0);
 transform: translateX(0);
+}
+.add_btn{
+  margin-top:200rpx;
 }

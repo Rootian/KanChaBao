@@ -1,0 +1,17 @@
+/* 页面底部效果 */
+
+.button_bottom{
+  background-color:black;
+  color:#fff;
+  bottom: 0rpx;
+  position: fixed;
+  width: 100%;
+  opacity: 1;
+}
+.button_hover{
+  opacity: 0.8;
+  transform: scale(0.95,0.95);
+}
+.double_view{
+  display: flex;
+}

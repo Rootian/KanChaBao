@@ -1,0 +1,41 @@
+/* pages/body/new_point/new_point.wxss */
+@import "../../common/lib/bottom.wxss";
+@import "../../common/lib/title_text.wxss";
+.cell_input{
+  background-color:white;
+  height: 70rpx;
+  padding-left:20rpx;
+  border: 1px solid #dadada;
+}
+.input{
+  height: 70rpx;
+  width:600rpx;
+  padding-left: 10rpx;
+  font-size:18px;
+}
+.loc{
+  width:300rpx;
+}
+.loc_double{
+  display: flex;
+}
+.double_info_text{
+  display: flex;
+}
+.double_input{
+  width:48%;
+}
+.double_view{
+  display: flex;
+}
+.save,
+.start{
+  width:48%;
+}
+.start{
+  margin-left:390rpx;
+}
+.choosepoint{
+  display: flex;
+}
+

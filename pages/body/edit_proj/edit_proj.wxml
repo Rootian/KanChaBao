@@ -1,2 +1,25 @@
 <!--pages/body/edit_proj/edit_proj.wxml-->
-<text>pages/body/edit_proj/edit_proj.wxml</text>
+<view class='table'>
+  <view class='info'>
+    <view class='info_text title_text'>序号</view>
+    <view class='info_text title_text'>采样点编号</view>
+    <view class='info_text title_text'>状态</view>
+  </view>
+</view>
+
+<view class='table'>
+  <radio-group class='radio-group' bindchange='radioChange'>
+    <label class='radio' wx:for='{{points}}' wx:key='{{item.index}}'>
+      <view class='r_check'>
+        <radio value='{{item.index}}'/>
+      </view>
+      <view class='points_info'>
+        <view class='r_index'>{{item.index}}</view>
+        <view class='r_name'>{{item.name}}</view>
+        <view class='r_status'>{{item.status}}</view>
+      </view>
+    </label>
+  </radio-group>
+</view>
+<button class='edit_point button_bottom' hover-class='button_hover' hidden='{{hidden}}' bindtap='edit_point'>编辑采样点</button>
+<button class='button_bottom' hover-class='button_hover' bindtap='new_point'>新建采样点</button>

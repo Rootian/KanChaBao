@@ -9,28 +9,12 @@ Page({
     startX: 0, //开始坐标
     startY: 0
   },
-  add_proj:function(){
+  add_proj:function(e){
     wx.navigateTo({
       url: '../add_proj/add_proj',
     })
   },
-  // edit_proj:function(){
-  //   wx.showActionSheet({
-  //     itemList: ["编辑","删除"],
-  //     success(res){
-  //       if (res.tapIndex == 0) //编辑
-  //       {
-  //         wx.navigateTo({
-  //           url: '../edit_proj/edit_proj',
-  //         })
-  //       }
-  //       else{
-  //         //删除
-
-  //       }
-  //     }
-  //   })
-  // },
+ 
 
   /**
    * 生命周期函数--监听页面加载
@@ -47,6 +31,8 @@ Page({
     });
 `   `
   },
+
+
   touchstart: function (e) {
     //开始触摸时 重置所有操作
     this.data.items.forEach(function (v, i) {
@@ -108,11 +94,19 @@ Page({
       items: this.data.items
     })
   },
-  //编辑时间
+  //编辑事件
   edit:function(e){
     setTimeout(this.edit_timeout,300,e)
   },
-  edit_timeout:function(){
+  edit_timeout:function(e){
+    var index = e.currentTarget.dataset.index
+    var proj_name = {
+      name: this.data.items[index].content
+    }
+    wx.setStorage({
+      key: 'proj_name',
+      data: proj_name,
+    })
     wx.navigateTo({
       url: '../edit_proj/edit_proj',
     })

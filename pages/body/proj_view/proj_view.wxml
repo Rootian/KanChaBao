@@ -1,13 +1,13 @@
 <!--pages/body/proj_view/proj_view.wxml-->
-
+<view class='info_text'>侧滑以编辑和删除项目</view>
 <view class="container">
 <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" >
 <view class="content">{{item.content}}</view>
 <view class="edit" catchtap="edit" data-index="{{index}}" hover-class="ui-edit-hover">编辑</view>
-<view class="del" catchtap="del" data-index="{{index}}" hover-class="ui-del-hover">删除</view>
+<view class="del" catchtap="del" data-index="{{index}}" hover-class="ui-edit-hover">删除</view>
 </view>
 </view>
-
-<view class='ui-add-icon' hover-class="ui-add-hover"> 
-     <image class='ui-add-img'  src='../../image/add_proj.png' bindtap='add_proj'></image>   
+<view style='width:100%;height:100rpx'></view>
+<view class='add_btn'>
+  <button class=' button_bottom' bindtap='add_proj' hover-class="button_hover">新建项目</button>
 </view>

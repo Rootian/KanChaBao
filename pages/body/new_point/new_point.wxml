@@ -1,0 +1,41 @@
+<!--pages/body/new_point/new_point.wxml-->
+
+<view class='container'>
+  <view class='info_table' wx:for='{{inputs}}' wx:key='{{item.index}}'>
+    <view class='double_info_text'>
+    <view class='info_text double_input'>{{item.fst_input}}</view>
+    <view class='info_text double_input'>{{item.sec_input}}</view>
+  </view>
+  <view class='loc_double'>
+    <view class='cell_input'>
+      <input placeholder='{{item.holder1}}' bindblur='{{item.bind1}}' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    <view class='cell_input'>
+      <input placeholder='{{item.holder2}}' bindblur='{{item.bind2}}' type='text' confirm-type='done' class='input loc'/>
+    </view>
+  </view>
+  </view>
+  <view class='info_table'>
+    <view class='double_info_text'>
+    <view class='info_text double_input'>经度</view>
+    <view class='info_text double_input'>纬度</view>
+  </view>
+  <view class='loc_double'>
+    <view class='cell_input'>
+      <input placeholder='4077332' value='{{lo}}' bindblur='{{Point_lo}}' type='text' confirm-type='done' class='input loc'/>
+    </view>
+    <view class='cell_input'>
+      <input placeholder='506236' value='{{la}}' bindblur='{{Point_la}}' type='text' confirm-type='done' class='input loc'/>
+    </view>
+  </view>
+  </view>
+</view>
+
+<view class='choosepoint'>
+  <button type='primary' bindtap='chooseLoc'>从地图上选择采样点</button>
+</view>
+
+<view class='double_view'>
+  <button class='button_bottom save' bindtap='save' hover-class="button_hover">保存</button>
+  <button class='button_bottom start' bindtap='start' hover-class="button_hover">开始</button>
+</view>

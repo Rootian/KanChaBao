@@ -1,0 +1,44 @@
+/* pages/body/add_soil/add_soil.wxss */
+@import "../../common/lib/bottom.wxss";
+@import "../../common/lib/title_text.wxss";
+.cell_input{
+  background-color:white;
+  height: 70rpx;
+  padding-left:20rpx;
+  border: 1px solid #dadada;
+}
+.input{
+  height: 70rpx;
+  width:600rpx;
+  padding-left: 10rpx;
+  font-size:18px;
+}
+.loc{
+  width:300rpx;
+}
+.loc_double{
+  display: flex;
+}
+.double_info_text{
+  display: flex;
+}
+.double_input{
+  width:48%;
+}
+
+.addPhoto
+{
+  opacity: 0.9;
+  transform: scale(0.95,0.95);
+}
+.button_add{
+  width: 150rpx;
+  height:150rpx;
+}
+.quit,
+.save{
+  width:48%;
+}
+.save{
+  margin-left:390rpx;
+}

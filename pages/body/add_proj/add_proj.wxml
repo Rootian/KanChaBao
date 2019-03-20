@@ -1,8 +1,20 @@
 <!--pages/body/add_proj/add_proj.wxml-->
 <view class="container">
-<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" >
-<view class="content">{{item.content}}</view>
-<view class="del" catchtap="del" data-index="{{index}}">删除</view>
+  <view class='info_text'>项目名称：</view>
+  <view class='cell_input'>
+    <input placeholder='项目A' bindblur='proj_name' type='text' confirm-type='done' class='input'/>
+  </view>
+  <view class='info_text'>采样单位：</view>
+  <view class='cell_input'>
+    <input placeholder='XXX公司' bindblur='proj_firm' type='text' confirm-type='done' class='input'/>
+  </view>
+  <view class='info_text'>项目负责人：</view>
+  <view class='cell_input'>
+    <input placeholder='张某' bindblur='proj_manager' type='text' confirm-type='done' class='input'/>
+  </view>
+
 </view>
+<view class='new_proj'>
+  <button class='button_bottom' bindtap='add_proj_done' hover-class="button_hover">完成</button>
 </view>
 

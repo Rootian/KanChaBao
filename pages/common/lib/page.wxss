@@ -1,0 +1,4 @@
+/* 整体页面效果 */
+page {
+background-color:ghostwhite;
+}
